@@ -1,0 +1,19 @@
+name: GitHub Downloader
+# Define when to run job here
+on: [push, pull_request]
+
+jobs:
+  example_job:
+    runs-on: ubuntu-latest
+    name: Runing Github Downloader
+    steps:
+    - uses: actions/checkout@v2
+
+     # Commit the updates
+    - name: Commit and Push Downloaded Files 
+      run: |
+         git config --global user.name "github-actions[bot]"
+         git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
+         cd USERNAME.github.com
+         git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
+         git push origin master
