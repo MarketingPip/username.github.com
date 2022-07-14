@@ -13,7 +13,7 @@ jobs:
     - name: Commit and Push Downloaded Files 
       run: |
          git config --global user.name "github-actions[bot]"
-         git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
-         cd USERNAME.github.com
-         git remote set-url origin git@github.com:USERNAME/USERNAME.github.com.git
+         git clone https://github.com/plusjade/jekyll-bootstrap.git username.github.com
+         cd username.github.com
+         git remote set-url origin git@github.com:MarketingPip/username.github.com.git
          git push origin master
